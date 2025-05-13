@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Website Builder{% endblock %}
+
+{% block main %}
+<nav class="navbar-secondary">
+    <ul class="navbar-links">
+        <li><a href="{{ url_for('dashboard.websitebuilder') }}">Website Builder</a></li>
+        <li><a href="{{ url_for('dashboard.tools_services') }}">Tools & services</a></li>
+        <li><a href="{{ url_for('dashboard.hosting') }}">Hosting Packages</a></li>
+        <li><a href="{{ url_for('dashboard.community') }}">Helpful Community</a></li>
+    </ul>
+</nav>
+
+<section class="hero wb-hero">
+  <div class="hero-content">
+    <h1>Build Stunning Websites Effortlessly</h1>
+    <p>Create your dream website in minutes — no coding required.</p>
+    <a href="{{ url_for('auth.register') }}" class="btn-primary">Get Started Free</a>
+  </div>
+</section>
+
+<section class="features">
+  <h2 class="section-title">Why Choose Our Builder?</h2>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <h3>Drag & Drop Editor</h3>
+      <p>Design with ease using our intuitive visual editor. No technical skills needed.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Responsive Design</h3>
+      <p>Your site will look great on desktop, tablet, and mobile — automatically.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Built-in Hosting</h3>
+      <p>Fast and reliable hosting included. No setup, no extra costs.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Free Templates</h3>
+      <p>Choose from a collection of professionally-designed templates to get started quickly.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Ready to Launch?</h2>
+  <p>Join thousands who built their online presence with Angelfire.</p>
+  <a href="{{ url_for('auth.register') }}" class="btn-primary">Start Building Now</a>
+</section>
+
+{% endblock %}

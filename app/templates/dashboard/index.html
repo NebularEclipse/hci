@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block main %}
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Angelfire</h1>
+      <p>Your gateway to powerful and modern services.</p>
+      <a href="{{ url_for('dashboard.websitebuilder') }}" class="btn-primary">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature">
+      <h2>Fast and Secure</h2>
+      <p>Experience the speed and security that comes with Angelfire's state-of-the-art systems.</p>
+    </div>
+    <div class="feature">
+      <h2>User-Friendly</h2>
+      <p>Navigate with ease, and enjoy a seamless user experience.</p>
+    </div>
+    <div class="feature">
+      <h2>Customizable</h2>
+      <p>Tailor the platform to fit your needs with our flexible settings and tools.</p>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <h2>Join Angelfire Today!</h2>
+    <p>Start your journey with Angelfire and explore all the amazing features.</p>
+    <a href="{{ url_for('auth.register') }}" class="btn-secondary">Sign Up</a>
+  </section>
+{% endblock %}

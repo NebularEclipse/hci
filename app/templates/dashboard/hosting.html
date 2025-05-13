@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+
+{% block title %}Hosting{% endblock %}
+
+{% block main %}
+<nav class="navbar-secondary">
+    <ul class="navbar-links">
+        <li><a href="{{ url_for('dashboard.websitebuilder') }}">Website Builder</a></li>
+        <li><a href="{{ url_for('dashboard.tools_services') }}">Tools & services</a></li>
+        <li><a href="{{ url_for('dashboard.hosting') }}">Hosting Packages</a></li>
+        <li><a href="{{ url_for('dashboard.community') }}">Helpful Community</a></li>
+    </ul>
+</nav>
+<div>
+    <section class="plans-section">
+    <h2>Hosting Plans</h2>
+        <div class="table-container">
+            <table class="modern-table">
+                <thead>
+                    <tr>
+                    <th></th>
+                    <th>Free</th>
+                    <th>Entry</th>
+                    <th>Basic</th>
+                    <th>THE Plan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><th colspan="5">Price</td></tr>
+                    <tr>
+                        <td>Subscription Fee</td>
+                        <td>Free signups closed</td>
+                        <td>Yearly: $12.55<br><small>($1.05/month)</small></td>
+                        <td>Monthly: $3.25<br>Yearly: $35.70</td>
+                        <td>Monthly: $10.95<br>Yearly: $120.40</td>
+                    </tr>
+                    <tr><th colspan="5">Tools & Services</th></tr>
+                    <tr>
+                        <td>Angelfire Site Builder</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Site Builder Shopping Cart</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Web Shell Editor</td>
+                        <td>—</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>FTP</td>
+                        <td>—</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr><th colspan="5">Hosting Details</th></tr>
+                    <tr>
+                        <td>Site Builder Websites</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>5</td>
+                        <td>Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td>Disk Space</td>
+                        <td>20 MB</td>
+                        <td>40 MB</td>
+                        <td>100 MB</td>
+                        <td>5 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Website Statistics</td>
+                        <td>Page Views</td>
+                        <td>Page Views</td>
+                        <td>Page Views & Logs</td>
+                        <td>All Stats</td>
+                    </tr>
+                    <tr>
+                        <td>Ads on your Website</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>No Ads</td>
+                        <td>No Ads</td>
+                    </tr>
+                    <tr><th colspan="5">Domain Names</th></tr>
+                    <tr>
+                        <td>FREE Domain Name</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Subdomains</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Domain Forwarding</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>IP Pointing</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Domain Transfers</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr><th colspan="5">Email</th></tr>
+                    <tr>
+                        <td>POP/IMAP E-Mail Accounts</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>Email Storage</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>5 GB/box</td>
+                    </tr>
+                    <tr>
+                        <td>Email Forwarding</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>20</td>
+                    </tr>
+                    <tr><th colspan="5">Customer Support</th></tr>
+                    <tr>
+                        <td>Help Ticket System</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Status Updates</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

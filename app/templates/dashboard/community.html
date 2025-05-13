@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Community{% endblock %}
+
+{% block main %}
+<nav class="navbar-secondary">
+    <ul class="navbar-links">
+        <li><a href="{{ url_for('dashboard.websitebuilder') }}">Website Builder</a></li>
+        <li><a href="{{ url_for('dashboard.tools_services') }}">Tools & services</a></li>
+        <li><a href="{{ url_for('dashboard.hosting') }}">Hosting Packages</a></li>
+        <li><a href="{{ url_for('dashboard.community') }}">Helpful Community</a></li>
+    </ul>
+</nav>
+
+{% if g.user %}
+    <a class="action" href="{{ url_for('dashboard.create') }}">New</a>
+{% endif %}
+
+{% for post in posts %}
+    <article class="post">
+        <header>
+            <div>
+                <h1>{{ post['title'] }}</h1>
+                <div class="about">by {{ post['username'] }} on {{ post['created'].strftime('%Y-%m-%d') }}</div>
+            </div>
+            {% if g.user['id'] == post['author_id'] %}
+            <a class="action" href="{{ url_for('dashboard.update', id=post['id']) }}">Edit</a>
+            {% endif %}
+        </header>
+        <p class="body">{{ post['body'] }}</p>
+    </article>
+    {% if not loop.last %}
+        <hr>
+    {% endif %}
+{% endfor %}
+
+{% endblock %}

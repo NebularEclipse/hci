@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}Tools & Services{% endblock %}
+
+{% block main %}
+<nav class="navbar-secondary">
+    <ul class="navbar-links">
+        <li><a href="{{ url_for('dashboard.websitebuilder') }}">Website Builder</a></li>
+        <li><a href="{{ url_for('dashboard.tools_services') }}">Tools & services</a></li>
+        <li><a href="{{ url_for('dashboard.hosting') }}">Hosting Packages</a></li>
+        <li><a href="{{ url_for('dashboard.community') }}">Helpful Community</a></li>
+    </ul>
+</nav>
+
+<section class="tools-hero">
+  <div class="hero-content">
+    <h1>Everything You Need to Build & Grow</h1>
+    <p>Explore our complete suite of tools — from site building to advanced hosting features.</p>
+  </div>
+</section>
+
+<section class="tools-grid-section">
+  <h2 class="section-title">Our Tools & Services</h2>
+  <div class="tools-grid">
+    <div class="tool-card">
+      <h3>Site Builder</h3>
+      <p>Create websites with drag-and-drop ease. No coding skills required.</p>
+    </div>
+    <div class="tool-card">
+      <h3>Web Shell Editor</h3>
+      <p>Get under the hood with full HTML/CSS editing and file control.</p>
+    </div>
+    <div class="tool-card">
+      <h3>FTP Access</h3>
+      <p>Upload and manage your files directly via FTP with ease.</p>
+    </div>
+    <div class="tool-card">
+      <h3>Shopping Cart</h3>
+      <p>Start selling with our built-in eCommerce solution, no extra plugins needed.</p>
+    </div>
+    <div class="tool-card">
+      <h3>Statistics Dashboard</h3>
+      <p>Track visits, clicks, and traffic sources to optimize your site performance.</p>
+    </div>
+    <div class="tool-card">
+      <h3>Domain Services</h3>
+      <p>Manage domains, subdomains, forwarding, and email integration.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Need More Power?</h2>
+  <p>Upgrade to a premium plan to unlock advanced tools and expanded resources.</p>
+  <a href="{{ url_for('dashboard.hosting') }}" class="btn-primary">View Hosting Plans</a>
+</section>
+
+{% endblock %}

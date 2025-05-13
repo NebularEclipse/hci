@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <a href="{{ url_for('index') }}" class="navbar-brand">
+          <img src="{{ url_for('static', filename='angelfireLogo.png') }}" />
+        </a>
+        <ul class="navbar-links">
+          {% if g.user %}
+          <li><span>{{ g.user['username'] }}</span></li>
+          <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
+          {% else %}
+          <li><a href="{{ url_for('auth.register') }}">Register</a></li>
+          <li><a href="{{ url_for('auth.login') }}">Login</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+    </header>
+
+    <main>{% block main %}{% endblock %}</main>
+
+    <footer>
+      <p>
+        Copyright &copy; 2025 <a href="#lycos">Lycos Inc.</a>, All Rights Reserved
+      </p>
+      <ul>
+        <li><a href="#help">Help</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#advertise">Advertise</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#tos">Terms of Service</a></li>
+        <li><a href="#rrr">RRR Doc</a></li>
+      </ul>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
+
+
