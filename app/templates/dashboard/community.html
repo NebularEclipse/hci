@@ -27,7 +27,8 @@
             <a class="action" href="{{ url_for('dashboard.update', id=post['id']) }}">Edit</a>
             {% endif %}
         </header>
-        <p class="body">{{ post['body'] }}</p>
+
+        <p class="body" style="white-space: pre-line;">{{ post['body'] }}</p>
     </article>
     {% if not loop.last %}
         <hr>
